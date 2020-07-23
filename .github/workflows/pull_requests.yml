@@ -44,18 +44,3 @@ jobs:
 
       - name: Run Slave unit tests
         run: docker build -f "slave.Dockerfile" -t slave/unit_tests --target test-env .
-
-  build:
-    # if the commit message doesnt contain [skip-ci] then run this job
-    if: "!contains(github.event.head_commit.message, '[skip-ci]')"
-    name: Build Docker images
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Build Master image
-        run: docker build --rm -f "master.Dockerfile" -t hypercube:master "."
-
-      - name: Build Slave image
-        run: docker build --rm -f "slave.Dockerfile" -t hypercube:slave "."
