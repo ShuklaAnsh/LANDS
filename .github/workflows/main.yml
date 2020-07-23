@@ -27,16 +27,18 @@ jobs:
           pip install -r src/tests/requirements.txt -r src/master/requirements.txt -r src/slave/requirements.txt
           
       - name: Run unit tests
+        working-directory: ./src
         run: coverage run -m pytest
         
       - name: Generate Slave Coverage Reports
+        working-directory: ./src
         run: coverage xml -o coverage.xml
 
       - name: Upload Slave Test Coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
           # Path to coverage file to upload
-          file: coverage.xml
+          file: src/coverage.xml
           # Flag upload to group coverage metrics (e.g. unittests | integration | ui,chrome)
           flags: unittests
           # Specify whether or not CI build should fail if Codecov runs into an error during upload
