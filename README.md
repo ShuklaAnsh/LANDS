@@ -1,7 +1,7 @@
-[![Build Pipeline](https://github.com/projectpolygon/hypercube/workflows/Build%20Pipeline/badge.svg)](https://github.com/projectpolygon/hypercube/actions)
-[![codecov](https://codecov.io/gh/projectpolygon/hypercube/branch/master/graph/badge.svg)](https://codecov.io/gh/projectpolygon/hypercube)
+[![Build Pipeline](https://github.com/catnapz/LANDS/workflows/Build%20Pipeline/badge.svg)](https://github.com/catnapz/LANDS/actions)
+[![codecov](https://codecov.io/gh/catnapz/LANDS/branch/master/graph/badge.svg)](https://codecov.io/gh/catnapz/LANDS)
 
-# hypercube
+# LANDS - LAN Distributed System
 A generic network distributed system for an use with an array of independent machines. This allows for a 
 normally very heavy task to be broken down into small task that can be distributed over many devices. An 
 example that has made use of this distribution is offline ray tracing due to its high cost of system 
@@ -34,13 +34,3 @@ To run:
 `pytest`  
 Or to get coverage report run:  
 `coverage run -m pytest`
-
-## Docker  
-Build and run docker images for Hypercube slave locally
-### Build  
-To build Docker images navigate to the hypercube directory and run the following:  
-`docker build --rm -f "slave.Dockerfile" -t hypercube:slave "."`
-
-### Run  
-To run the built Docker images navigate to the hypercube directory and run the following:  
-`docker run -it hypercube:slave`
