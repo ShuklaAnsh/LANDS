@@ -1,11 +1,12 @@
 [![Build Pipeline](https://github.com/catnapz/LANDS/workflows/Build%20Pipeline/badge.svg)](https://github.com/catnapz/LANDS/actions)
 [![codecov](https://codecov.io/gh/catnapz/LANDS/branch/master/graph/badge.svg)](https://codecov.io/gh/catnapz/LANDS)
 
-# LANDS - LAN Distributed System
-A generic network distributed system for an use with an array of independent machines. This allows for a 
-normally very heavy task to be broken down into small task that can be distributed over many devices. An 
-example that has made use of this distribution is offline ray tracing due to its high cost of system 
-resources.
+# LANDS - LAN Distribution System
+A generic network distribution system for an use with an array of independent machines. This allows for a 
+normally very heavy task to be broken down into small task that can be distributed over many devices.
+
+### REQUIREMENTS
+- Python 3.8
 
 ## Slave
 Slave nodes require very little setup, simply ensure the compiled app you want to execute a task with is in
